@@ -16,8 +16,8 @@ function print_content()
    if (!empty($_GET['list'])) {
       $tit = htmlspecialchars($_GET['list']);
       echo "<h3>".$tit."</h3>";
-      $dir = basename('./fishData/');
-      $content = htmlspecialchars(file_get_contents( $dir. $_GET['list']));
+      $dir = basename('./fishData');
+      $content = htmlspecialchars(file_get_contents( $dir.'/'. $_GET['list']));
       echo "<p>$content</p>";
    } else {
       echo '시마노 릴 정보 사이트에 오신 여러분 환영합니다.';
